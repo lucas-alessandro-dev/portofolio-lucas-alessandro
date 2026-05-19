@@ -1,0 +1,1 @@
+- [User profile: Lucas Alessandro](user_profile.md) — Full-stack dev focused on PHP/Laravel, building a bilingual personal portfolio (PT/EN).
