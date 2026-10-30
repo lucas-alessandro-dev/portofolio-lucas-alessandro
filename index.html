@@ -1,718 +1,511 @@
 <!DOCTYPE html>
-<html class="dark" lang="pt-BR">
+<html lang="pt-BR" class="no-js">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Lucas Alessandro | Software Engineer · PHP · Laravel</title>
-<link rel="icon" type="image/jpeg" href="./perfil%20lucas.jpeg"/>
-<meta name="description" content="Portfólio de Lucas Alessandro — Engenheiro de Software especializado em PHP, Laravel, Node.js e Arquitetura de Software."/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-primary": "#3f008e",
-                    "primary-container": "#7c3aed",
-                    "on-tertiary-container": "#ffe0cd",
-                    "tertiary-fixed": "#ffdcc6",
-                    "primary-fixed": "#eaddff",
-                    "background": "#0B0B12",
-                    "on-error-container": "#ffdad6",
-                    "on-primary-fixed-variant": "#5a00c6",
-                    "on-background": "#e8dfee",
-                    "surface-dim": "#15121b",
-                    "on-primary-fixed": "#25005a",
-                    "secondary-fixed": "#acedff",
-                    "surface-tint": "#d2bbff",
-                    "on-surface": "#e8dfee",
-                    "secondary-container": "#03b5d3",
-                    "on-primary-container": "#ede0ff",
-                    "surface-container-low": "#1d1a24",
-                    "surface-bright": "#3c3742",
-                    "inverse-surface": "#e8dfee",
-                    "tertiary-container": "#a15100",
-                    "outline": "#958da1",
-                    "on-surface-variant": "#ccc3d8",
-                    "inverse-primary": "#732ee4",
-                    "secondary": "#4cd7f6",
-                    "on-secondary-container": "#00424e",
-                    "on-tertiary-fixed": "#301400",
-                    "surface-container-highest": "#37333e",
-                    "surface": "#15121b",
-                    "secondary-fixed-dim": "#4cd7f6",
-                    "inverse-on-surface": "#332f39",
-                    "surface-variant": "#37333e",
-                    "surface-container": "#221e28",
-                    "primary-fixed-dim": "#d2bbff",
-                    "primary": "#d2bbff",
-                    "outline-variant": "#4a4455",
-                    "on-secondary-fixed": "#001f26",
-                    "tertiary-fixed-dim": "#ffb784",
-                    "on-tertiary-fixed-variant": "#713700",
-                    "surface-container-high": "#2c2833",
-                    "on-tertiary": "#4f2500",
-                    "error-container": "#93000a",
-                    "tertiary": "#ffb784",
-                    "on-secondary": "#003640",
-                    "on-error": "#690005",
-                    "error": "#ffb4ab",
-                    "surface-container-lowest": "#100d16",
-                    "on-secondary-fixed-variant": "#004e5c"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "stack-lg": "32px",
-                    "section-padding": "80px",
-                    "stack-sm": "8px",
-                    "margin-mobile": "16px",
-                    "container-max": "1200px",
-                    "gutter": "24px",
-                    "stack-md": "16px",
-                    "base": "4px"
-            },
-            "fontFamily": {
-                    "headline-lg-mobile": ["Space Grotesk"],
-                    "code-sm": ["JetBrains Mono"],
-                    "body-md": ["Inter"],
-                    "headline-lg": ["Space Grotesk"],
-                    "body-lg": ["Inter"],
-                    "label-caps": ["JetBrains Mono"],
-                    "headline-md": ["Space Grotesk"],
-                    "display": ["Space Grotesk"]
-            },
-            "fontSize": {
-                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
-                    "code-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
-                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
-                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
-                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
-                    "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
-            }
-          },
-        },
-      }
-    </script>
-<style>
-        body { background-color: #0B0B12; color: #e8dfee; scroll-behavior: smooth; }
-        .glass-header { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-        .violet-glow { box-shadow: 0 0 20px rgba(124, 58, 237, 0.15); transition: all 0.3s ease; }
-        .violet-glow:hover { box-shadow: 0 0 30px rgba(124, 58, 237, 0.4); transform: translateY(-4px); }
-        .skill-chip { background: rgba(210, 187, 255, 0.1); border: 1px solid rgba(210, 187, 255, 0.2); }
-        .terminal-dot { width: 12px; height: 12px; border-radius: 50%; }
-        .active-lang { color: #d2bbff; font-weight: bold; }
-        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lucas Alessandro · Engenheiro de Software Back-End</title>
+<meta name="description" content="Portfólio de Lucas Alessandro, engenheiro de software back-end em Goiânia: PHP, Laravel, Node.js e arquitetura de software em sistemas no Brasil e nos EUA.">
+<meta name="theme-color" content="#0c0b10">
+<link rel="canonical" href="https://lucasalessandro.dev/">
 
-        @keyframes type {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-        .typewriter { overflow: hidden; white-space: nowrap; border-right: 2px solid #7c3aed; animation: type 2s steps(40, end), blink .75s step-end infinite; }
-        @keyframes blink { from, to { border-color: transparent } 50% { border-color: #7c3aed } }
-    </style>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lucas Alessandro">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Lucas Alessandro · Engenheiro de Software Back-End">
+<meta property="og:description" content="PHP, Laravel, Node.js e arquitetura de software em sistemas no Brasil e nos EUA.">
+<meta property="og:url" content="https://lucasalessandro.dev/">
+<meta property="og:image" content="https://lucasalessandro.dev/perfil%20lucas.jpeg">
+<meta property="og:image:alt" content="Retrato de Lucas Alessandro">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/site.css">
+<script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js')</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Lucas Alessandro",
+  "url": "https://lucasalessandro.dev/",
+  "image": "https://lucasalessandro.dev/perfil%20lucas.jpeg",
+  "jobTitle": "Software Engineer (Back-End)",
+  "email": "mailto:lucasalessandropro@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Goiânia", "addressRegion": "GO", "addressCountry": "BR" },
+  "knowsAbout": ["PHP", "Laravel", "Node.js", "MySQL", "REST APIs", "Clean Architecture", "Domain-Driven Design"],
+  "sameAs": ["https://github.com/lucas-alessandro-dev", "https://www.linkedin.com/in/lucas-alessandro"]
+}
+</script>
 </head>
-<body class="font-body-md selection:bg-primary-container selection:text-on-primary">
-<!-- Header Navigation -->
-<header class="fixed top-0 w-full z-50 glass-header border-b border-outline-variant/20 bg-surface/60 shadow-sm" id="top-nav">
-<div class="flex justify-between items-center h-16 px-margin-mobile md:px-gutter max-w-container-max mx-auto">
-<div class="flex items-center gap-2">
-<div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-container to-secondary flex items-center justify-center font-headline-md text-on-primary-container">LA</div>
-<span class="hidden md:block font-headline-md text-headline-md font-bold text-on-surface">Lucas Alessandro</span>
-</div>
-<nav class="hidden md:flex gap-stack-lg">
-<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" data-i18n="nav-about" href="#about">Sobre</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" data-i18n="nav-skills" href="#skills">Skills</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" data-i18n="nav-projects" href="#projects">Projetos</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" data-i18n="nav-experience" href="#experience">Experiência</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" data-i18n="nav-education" href="#education">Formação</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" data-i18n="nav-contact" href="#contact">Contato</a>
-</nav>
-<div class="flex items-center gap-4">
-<div class="flex bg-surface-container rounded-full p-1 border border-outline-variant/30 text-label-caps" role="group" aria-label="Language switcher">
-<button class="px-3 py-1 rounded-full active-lang transition-all" id="lang-pt" onclick="setLanguage('pt')" aria-label="Português">PT</button>
-<span class="text-outline-variant" aria-hidden="true">|</span>
-<button class="px-3 py-1 rounded-full text-on-surface-variant transition-all" id="lang-en" onclick="setLanguage('en')" aria-label="English">EN</button>
-</div>
-<button class="md:hidden material-symbols-outlined text-on-surface" onclick="toggleMobileMenu()" aria-label="Open menu">menu</button>
-</div>
-</div>
-<!-- Mobile Menu -->
-<div class="hidden md:hidden bg-surface-container-high border-b border-outline-variant/20 py-4 px-margin-mobile flex flex-col gap-4" id="mobile-menu">
-<a class="font-body-md text-on-surface-variant" data-i18n="nav-about" href="#about" onclick="toggleMobileMenu()">Sobre</a>
-<a class="font-body-md text-on-surface-variant" data-i18n="nav-skills" href="#skills" onclick="toggleMobileMenu()">Skills</a>
-<a class="font-body-md text-on-surface-variant" data-i18n="nav-projects" href="#projects" onclick="toggleMobileMenu()">Projetos</a>
-<a class="font-body-md text-on-surface-variant" data-i18n="nav-experience" href="#experience" onclick="toggleMobileMenu()">Experiência</a>
-<a class="font-body-md text-on-surface-variant" data-i18n="nav-education" href="#education" onclick="toggleMobileMenu()">Formação</a>
-<a class="font-body-md text-on-surface-variant" data-i18n="nav-contact" href="#contact" onclick="toggleMobileMenu()">Contato</a>
-</div>
+<body>
+
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4"/></symbol>
+  <!-- A pasta: o único formato com caráter da página. -->
+  <symbol id="mf" viewBox="0 0 12 10"><path d="M0 2.5 1 0h4.4l1 2.5H12V10H0z"/></symbol>
+</svg>
+
+<a class="skip" href="#sobre" data-i18n="skip">Pular para o conteúdo</a>
+
+<header class="topbar" data-topbar>
+  <nav class="topbar__nav" aria-label="Seções" data-i18n-aria="nav-label">
+    <a href="#sobre" data-i18n="nav-sobre">Sobre</a>
+    <a href="#trabalho" data-i18n="nav-trabalho">Trabalho</a>
+    <a href="#stack" data-i18n="nav-stack">Stack</a>
+    <a href="#trajetoria" data-i18n="nav-trajetoria">Trajetória</a>
+    <a href="#contato" data-i18n="nav-contato">Contato</a>
+  </nav>
+  <button class="topbar__menu" type="button" aria-controls="menu" aria-expanded="false" data-menu-toggle data-i18n="menu">Menu</button>
+
+  <a class="wordmark" href="#topo" translate="no">
+    <svg aria-hidden="true"><use href="#mf"/></svg>
+    <span>lucas alessandro</span>
+  </a>
+
+  <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="lang-label">
+    <button type="button" data-lang="pt" aria-pressed="true" lang="pt-BR">PT</button>
+    <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+  </div>
 </header>
-<main class="pt-16">
-<!-- Hero Section -->
-<section class="min-h-[819px] flex items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto py-section-padding" id="hero">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
-<div class="fade-in">
-<span class="font-label-caps text-secondary tracking-widest" data-i18n="hero-tag">SOFTWARE ENGINEER · PHP · LARAVEL</span>
-<h1 class="font-display text-display mt-stack-sm mb-stack-md" data-i18n="hero-title">Olá, eu sou Lucas Alessandro.</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-stack-lg" data-i18n="hero-desc">
-                        Engenheiro de Software focado em Back-End com PHP, Laravel e Node.js. Atuo no desenvolvimento e evolução de sistemas escaláveis, em projetos nacionais e internacionais, com foco em Arquitetura de Software e Clean Architecture.
-                    </p>
-<div class="flex flex-wrap gap-4 mb-stack-lg">
-<a class="bg-primary-container text-on-primary-container px-8 py-3 rounded-lg font-bold hover:scale-105 transition-all violet-glow flex items-center gap-2" href="#projects">
-<span data-i18n="hero-btn-projects">Ver Projetos</span>
-<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
-</a>
-<a class="border border-secondary text-secondary px-8 py-3 rounded-lg font-bold hover:bg-secondary/10 transition-all flex items-center gap-2" href="#contact">
-<span data-i18n="hero-btn-contact">Entrar em contato</span>
-<span class="material-symbols-outlined" data-icon="mail">mail</span>
-</a>
-</div>
-<div class="flex gap-6 text-on-surface-variant">
-<a class="hover:text-primary transition-colors" href="https://github.com/lucas-alessandro-dev" target="_blank" rel="noopener" aria-label="GitHub"><span class="material-symbols-outlined" data-icon="code">code</span></a>
-<a class="hover:text-primary transition-colors" href="https://www.linkedin.com/in/lucas-alessandro" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="material-symbols-outlined" data-icon="work">work</span></a>
-<a class="hover:text-primary transition-colors" href="mailto:lucasalessandropro@gmail.com" aria-label="Email"><span class="material-symbols-outlined" data-icon="mail">mail</span></a>
-</div>
-</div>
-<!-- Terminal Mock -->
-<div class="fade-in bg-surface-container rounded-xl border border-outline-variant/30 overflow-hidden violet-glow hidden lg:block">
-<div class="bg-surface-container-highest px-4 py-3 flex items-center gap-2 border-b border-outline-variant/20">
-<div class="terminal-dot bg-red-500"></div>
-<div class="terminal-dot bg-yellow-500"></div>
-<div class="terminal-dot bg-green-500"></div>
-<span class="text-label-caps text-on-surface-variant ml-2 opacity-50">lucas@dev-box: ~</span>
-</div>
-<div class="p-6 font-code-sm text-code-sm text-primary">
-<div class="mb-2"><span class="text-secondary">$</span> whoami</div>
-<div class="text-on-surface mb-4 typewriter">lucas-alessandro</div>
-<div class="mb-2"><span class="text-secondary">$</span> stack --list</div>
-<div class="grid grid-cols-2 gap-2 text-on-surface-variant">
-<div>- PHP 8 / Laravel</div>
-<div>- Node.js / MySQL</div>
-<div>- Angular / TypeScript</div>
-<div>- Clean Arch / DDD</div>
-</div>
-<div class="mt-4"><span class="text-secondary">$</span> status</div>
-<div class="text-green-400" data-i18n="terminal-status">Aberto a novas oportunidades_</div>
-</div>
-</div>
-</div>
-</section>
-<!-- About Section -->
-<section class="bg-surface-container-lowest py-section-padding px-margin-mobile md:px-gutter" id="about">
-<div class="max-w-container-max mx-auto">
-<div class="flex flex-col md:flex-row gap-16 items-center">
-<div class="w-64 h-64 md:w-80 md:h-80 relative flex-shrink-0 fade-in">
-<div class="absolute inset-0 rounded-full border-2 border-primary border-dashed animate-[spin_20s_linear_infinite]"></div>
-<img alt="Lucas Alessandro" class="w-full h-full object-cover rounded-full p-4 grayscale hover:grayscale-0 transition-all duration-500" src="./perfil%20lucas.jpeg"/>
-</div>
-<div class="fade-in">
-<h2 class="font-headline-lg text-headline-lg mb-stack-md" data-i18n="about-title">Engenharia de Software com foco em Arquitetura</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg leading-relaxed" data-i18n="about-text">
-                            Desenvolvedor Back-End com mais de 4 anos de experiência em PHP e Laravel, atuando em sistemas escaláveis para empresas brasileiras e norte-americanas. Especialidade em manutenção e evolução de sistemas complexos, integração entre sistemas, correção de bugs e otimização de performance. Atualmente em especialização em Arquitetura de Software (FIAP Pós-Tech), com foco em sistemas distribuídos, Clean Architecture e soluções orientadas a domínio.
-                        </p>
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-stack-md">
-<div class="bg-surface-container p-stack-md rounded-xl border border-outline-variant/20">
-<span class="block font-display text-primary text-headline-lg mb-1">4+</span>
-<span class="font-label-caps text-on-surface-variant" data-i18n="stat-1">Anos de Exp.</span>
-</div>
-<div class="bg-surface-container p-stack-md rounded-xl border border-outline-variant/20">
-<span class="block font-display text-secondary text-headline-lg mb-1">3</span>
-<span class="font-label-caps text-on-surface-variant" data-i18n="stat-2">Empresas</span>
-</div>
-<div class="bg-surface-container p-stack-md rounded-xl border border-outline-variant/20">
-<span class="block font-display text-tertiary text-headline-lg mb-1">2</span>
-<span class="font-label-caps text-on-surface-variant" data-i18n="stat-3">Países (BR / US)</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Skills Section -->
-<section class="py-section-padding px-margin-mobile md:px-gutter max-w-container-max mx-auto" id="skills">
-<h2 class="font-headline-lg text-headline-lg mb-stack-lg text-center" data-i18n="skills-title">Arsenal Técnico</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
-<!-- Backend -->
-<div class="fade-in bg-surface-container-high p-stack-lg rounded-xl border border-outline-variant/10">
-<div class="flex items-center gap-3 mb-stack-md">
-<span class="material-symbols-outlined text-primary" data-icon="dns">dns</span>
-<h3 class="font-headline-md text-headline-md" data-i18n="skill-cat-1">Backend</h3>
-</div>
-<div class="flex flex-wrap gap-2">
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm">PHP 8</span>
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm">Laravel</span>
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm">Node.js</span>
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm">REST APIs</span>
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm">MySQL</span>
-</div>
-</div>
-<!-- Frontend -->
-<div class="fade-in bg-surface-container-high p-stack-lg rounded-xl border border-outline-variant/10">
-<div class="flex items-center gap-3 mb-stack-md">
-<span class="material-symbols-outlined text-secondary" data-icon="web">web</span>
-<h3 class="font-headline-md text-headline-md" data-i18n="skill-cat-2">Frontend</h3>
-</div>
-<div class="flex flex-wrap gap-2">
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm">Angular 14</span>
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm">JavaScript</span>
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm">TypeScript</span>
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm">HTML5</span>
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm">CSS3</span>
-</div>
-</div>
-<!-- Quality / Tools -->
-<div class="fade-in bg-surface-container-high p-stack-lg rounded-xl border border-outline-variant/10">
-<div class="flex items-center gap-3 mb-stack-md">
-<span class="material-symbols-outlined text-tertiary" data-icon="terminal">terminal</span>
-<h3 class="font-headline-md text-headline-md" data-i18n="skill-cat-3">Qualidade / Ferramentas</h3>
-</div>
-<div class="flex flex-wrap gap-2">
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm">SonarQube</span>
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm">Git</span>
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm">Linux</span>
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm">macOS</span>
-</div>
-</div>
-<!-- Arquitetura -->
-<div class="fade-in bg-surface-container-high p-stack-lg rounded-xl border border-outline-variant/10">
-<div class="flex items-center gap-3 mb-stack-md">
-<span class="material-symbols-outlined text-on-surface" data-icon="architecture">architecture</span>
-<h3 class="font-headline-md text-headline-md" data-i18n="skill-cat-4">Arquitetura</h3>
-</div>
-<div class="flex flex-wrap gap-2">
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm" data-i18n="skill-s1">Clean Architecture</span>
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm" data-i18n="skill-s2">DDD</span>
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm" data-i18n="skill-s3">Sistemas Distribuídos</span>
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm" data-i18n="skill-s4">Integrações</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Projects Section -->
-<section class="py-section-padding px-margin-mobile md:px-gutter bg-surface-container-lowest" id="projects">
-<div class="max-w-container-max mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg gap-4">
-<div class="fade-in">
-<h2 class="font-headline-lg text-headline-lg" data-i18n="projects-title">Domínios em que atuei</h2>
-<p class="text-on-surface-variant font-body-md mt-2" data-i18n="projects-subtitle">Uma seleção de sistemas e produtos em que desenvolvi e evoluí.</p>
-</div>
-<div class="flex gap-2 fade-in" id="project-filters">
-<button class="px-4 py-1 rounded-full border border-primary text-primary text-label-caps hover:bg-primary/10 transition-colors" data-filter="all" data-i18n="filter-all">TUDO</button>
-<button class="px-4 py-1 rounded-full border border-outline-variant text-on-surface-variant text-label-caps hover:border-primary transition-colors" data-filter="saas" data-i18n="filter-saas">SAAS</button>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="project-grid">
-<!-- Project 1: Mosyle -->
-<div class="fade-in bg-surface-container rounded-xl overflow-hidden violet-glow border border-outline-variant/10 group" data-category="saas">
-<div class="aspect-video overflow-hidden bg-gradient-to-br from-primary-container/30 to-secondary/20 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-6xl opacity-60">devices</span>
-</div>
-<div class="p-stack-md">
-<div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-md text-headline-md">Mosyle <span class="text-secondary text-sm font-body-md">· USA</span></h3>
-<a href="https://mosyle.com/" target="_blank" rel="noopener" class="text-primary hover:scale-110 transition-transform" aria-label="Abrir site da Mosyle"><span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span></a>
-</div>
-<p class="font-body-md text-on-surface-variant mb-stack-md line-clamp-3" data-i18n="proj-1-desc">Plataforma de gerenciamento e segurança de dispositivos Apple (MDM + Endpoint Security) para escolas K-12, empresas e MSPs — mais de 47 mil organizações atendidas. Atuação backend em PHP: novas funcionalidades, correções e melhorias de performance em ambiente internacional.</p>
-<div class="flex flex-wrap gap-2">
-<span class="px-2 py-0.5 bg-surface-bright rounded text-[10px] font-label-caps text-secondary">PHP</span>
-<span class="px-2 py-0.5 bg-surface-bright rounded text-[10px] font-label-caps text-secondary">LARAVEL</span>
-<span class="px-2 py-0.5 bg-surface-bright rounded text-[10px] font-label-caps text-secondary">MYSQL</span>
-</div>
-</div>
-</div>
-<!-- Project 2: Ileva -->
-<div class="fade-in bg-surface-container rounded-xl overflow-hidden violet-glow border border-outline-variant/10 group" data-category="saas">
-<div class="aspect-video overflow-hidden bg-gradient-to-br from-secondary/30 to-primary-container/20 flex items-center justify-center">
-<span class="material-symbols-outlined text-secondary text-6xl opacity-60">directions_car</span>
-</div>
-<div class="p-stack-md">
-<div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-md text-headline-md">Ileva Gestão Inteligente</h3>
-<a href="https://www.ileva.com.br/" target="_blank" rel="noopener" class="text-primary hover:scale-110 transition-transform" aria-label="Abrir site da Ileva"><span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span></a>
-</div>
-<p class="font-body-md text-on-surface-variant mb-stack-md line-clamp-3" data-i18n="proj-2-desc">Plataforma de gestão para associações de proteção veicular — módulos comercial (captação de leads, propostas, vistoria e assinatura digital), gestão de eventos (sinistros, oficinas) e gestão do associado. Atuação na evolução, integrações e novas funcionalidades.</p>
-<div class="flex flex-wrap gap-2">
-<span class="px-2 py-0.5 bg-surface-bright rounded text-[10px] font-label-caps text-secondary">PHP</span>
-<span class="px-2 py-0.5 bg-surface-bright rounded text-[10px] font-label-caps text-secondary">LARAVEL</span>
-<span class="px-2 py-0.5 bg-surface-bright rounded text-[10px] font-label-caps text-secondary">SONARQUBE</span>
-</div>
-</div>
-</div>
-<!-- Project 3: SIG Net Supre -->
-<div class="fade-in bg-surface-container rounded-xl overflow-hidden violet-glow border border-outline-variant/10 group" data-category="saas">
-<div class="aspect-video overflow-hidden bg-gradient-to-br from-tertiary/30 to-primary-container/20 flex items-center justify-center">
-<span class="material-symbols-outlined text-tertiary text-6xl opacity-60">dashboard</span>
-</div>
-<div class="p-stack-md">
-<div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-md text-headline-md">SIG · Net Supre</h3>
-<a href="https://netsupre.com.br/" target="_blank" rel="noopener" class="text-primary hover:scale-110 transition-transform" aria-label="Abrir site da Net Supre"><span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span></a>
-</div>
-<p class="font-body-md text-on-surface-variant mb-stack-md line-clamp-3" data-i18n="proj-3-desc">Sistema Integrado de Gestão da Net Supre — suíte composta por módulos de cobrança para cooperativas Sicoob, gestão imobiliária, sindicatos/associações e comunicação. Atuação em desenvolvimento, manutenção e integrações entre os módulos.</p>
-<div class="flex flex-wrap gap-2">
-<span class="px-2 py-0.5 bg-surface-bright rounded text-[10px] font-label-caps text-secondary">PHP</span>
-<span class="px-2 py-0.5 bg-surface-bright rounded text-[10px] font-label-caps text-secondary">LARAVEL</span>
-<span class="px-2 py-0.5 bg-surface-bright rounded text-[10px] font-label-caps text-secondary">MYSQL</span>
-</div>
-</div>
-</div>
-<!-- Project 5: GitHub -->
-<div class="fade-in bg-surface-container rounded-xl overflow-hidden violet-glow border border-outline-variant/10 group" data-category="saas">
-<div class="aspect-video overflow-hidden bg-gradient-to-br from-secondary/30 to-tertiary/20 flex items-center justify-center">
-<span class="material-symbols-outlined text-secondary text-6xl opacity-60">code</span>
-</div>
-<div class="p-stack-md">
-<div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-md text-headline-md">Estudos Open Source</h3>
-<a href="https://github.com/lucas-alessandro-dev" target="_blank" rel="noopener" class="text-primary hover:scale-110 transition-transform" aria-label="Abrir GitHub"><span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span></a>
-</div>
-<p class="font-body-md text-on-surface-variant mb-stack-md line-clamp-3" data-i18n="proj-5-desc">Projetos pessoais e de estudo no GitHub explorando Clean Architecture, DDD, automação e novas tecnologias do ecossistema PHP/Node.</p>
-<div class="flex flex-wrap gap-2">
-<span class="px-2 py-0.5 bg-surface-bright rounded text-[10px] font-label-caps text-secondary">PHP</span>
-<span class="px-2 py-0.5 bg-surface-bright rounded text-[10px] font-label-caps text-secondary">NODE.JS</span>
-<span class="px-2 py-0.5 bg-surface-bright rounded text-[10px] font-label-caps text-secondary">CLEAN ARCH</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Experience Section -->
-<section class="py-section-padding px-margin-mobile md:px-gutter max-w-container-max mx-auto" id="experience">
-<h2 class="font-headline-lg text-headline-lg mb-stack-lg text-center" data-i18n="exp-title">Trajetória Profissional</h2>
-<div class="relative ml-4 md:mx-auto max-w-3xl">
-<div class="absolute left-0 top-0 bottom-0 w-0.5 bg-primary/30"></div>
 
-<div class="mb-stack-lg pl-stack-lg relative fade-in">
-<div class="absolute left-[-5px] top-2 w-3 h-3 rounded-full bg-primary ring-4 ring-primary/20"></div>
-<span class="font-label-caps text-secondary" data-i18n="exp-1-date">OUT/2025 — PRESENTE</span>
-<h3 class="font-headline-md text-headline-md mt-1" data-i18n="exp-1-role">Desenvolvedor Back-End Pleno</h3>
-<p class="text-primary font-body-md mb-2">Ileva Gestão Inteligente · Goiânia, BR</p>
-<p class="font-body-md text-on-surface-variant" data-i18n="exp-1-desc">Evolução de sistemas backend com foco em organização arquitetural, manutenção de legado e implementação de novas funcionalidades. Atuação em correções, otimizações e integrações, participando de decisões técnicas voltadas a escalabilidade, qualidade e manutenibilidade.</p>
-</div>
+<nav class="menu" id="menu" aria-label="Seções" data-i18n-aria="nav-label" hidden>
+  <a href="#sobre" data-i18n="nav-sobre">Sobre</a>
+  <a href="#trabalho" data-i18n="nav-trabalho">Trabalho</a>
+  <a href="#stack" data-i18n="nav-stack">Stack</a>
+  <a href="#trajetoria" data-i18n="nav-trajetoria">Trajetória</a>
+  <a href="#contato" data-i18n="nav-contato">Contato</a>
+</nav>
 
-<div class="mb-stack-lg pl-stack-lg relative fade-in">
-<div class="absolute left-[-5px] top-2 w-3 h-3 rounded-full bg-primary ring-4 ring-primary/20"></div>
-<span class="font-label-caps text-secondary" data-i18n="exp-2-date">FEV/2024 — NOV/2025</span>
-<h3 class="font-headline-md text-headline-md mt-1" data-i18n="exp-2-role">Back-End PHP</h3>
-<p class="text-primary font-body-md mb-2">Mosyle · Winter Park, Flórida, EUA</p>
-<p class="font-body-md text-on-surface-variant" data-i18n="exp-2-desc">Desenvolvimento e manutenção de aplicações backend em PHP para sistemas corporativos em ambiente internacional. Implementação de novas funcionalidades, correção de bugs e melhorias de performance, com uso de inglês técnico no dia a dia.</p>
-</div>
+<main>
 
-<div class="mb-stack-lg pl-stack-lg relative fade-in">
-<div class="absolute left-[-5px] top-2 w-3 h-3 rounded-full bg-outline-variant ring-4 ring-outline-variant/10"></div>
-<span class="font-label-caps text-secondary" data-i18n="exp-3-date">AGO/2023 — MAR/2024</span>
-<h3 class="font-headline-md text-headline-md mt-1" data-i18n="exp-3-role">Back-End PHP</h3>
-<p class="text-primary font-body-md mb-2">Ileva Gestão Inteligente · Goiânia, BR</p>
-<p class="font-body-md text-on-surface-variant" data-i18n="exp-3-desc">Desenvolvimento de novas funcionalidades e manutenção de sistemas existentes, atuando em integrações, testes e melhoria contínua da qualidade do software, com colaboração entre diferentes áreas da empresa.</p>
-</div>
+<!-- ═══ Hero: o nome e a pilha de pastas. Cada pasta é uma seção e empresta a ela a sua cor. ═══ -->
+<section class="hero" id="topo" aria-labelledby="hero-title">
+  <div class="hero__head">
+    <h1 class="hero__title" id="hero-title" translate="no"><span>Lucas</span> <span>Alessandro</span></h1>
+    <p class="hero__sub" data-i18n="hero-sub">Engenheiro de software back-end. Desenvolvo e evoluo sistemas em PHP, Laravel e Node.js, em produção no Brasil e nos EUA.</p>
+  </div>
 
-<div class="mb-stack-lg pl-stack-lg relative fade-in">
-<div class="absolute left-[-5px] top-2 w-3 h-3 rounded-full bg-outline-variant ring-4 ring-outline-variant/10"></div>
-<span class="font-label-caps text-secondary" data-i18n="exp-4-date">AGO/2022 — JUL/2023</span>
-<h3 class="font-headline-md text-headline-md mt-1" data-i18n="exp-4-role">Back-End PHP</h3>
-<p class="text-primary font-body-md mb-2">Net Supre Tecnologia · Goiânia, BR</p>
-<p class="font-body-md text-on-surface-variant" data-i18n="exp-4-desc">Desenvolvimento e manutenção de sistemas de faturamento e gestão para cooperativas financeiras (Sicoob), além de CRMs para imobiliárias, sindicatos e associações. Criação e manutenção de websites corporativos.</p>
-</div>
-
-<div class="pl-stack-lg relative fade-in">
-<div class="absolute left-[-5px] top-2 w-3 h-3 rounded-full bg-outline-variant ring-4 ring-outline-variant/10"></div>
-<span class="font-label-caps text-secondary" data-i18n="exp-5-date">FEV/2022 — AGO/2022</span>
-<h3 class="font-headline-md text-headline-md mt-1" data-i18n="exp-5-role">Suporte Técnico</h3>
-<p class="text-primary font-body-md mb-2">Net Supre Tecnologia · Goiânia, BR</p>
-<p class="font-body-md text-on-surface-variant" data-i18n="exp-5-desc">Atendimento e suporte a usuários, apoio na manutenção e operação de sistemas internos — primeiro contato com o ambiente técnico antes da transição para desenvolvimento.</p>
-</div>
-</div>
+  <nav class="stack" aria-label="Índice" data-i18n-aria="index-label">
+    <a class="folder is-paper" href="#contato" style="--x-d:6%;--x-m:0%"><span class="folder__tab" data-i18n="nav-contato">Contato</span></a>
+    <a class="folder is-dusk" href="#trajetoria" style="--x-d:28%;--x-m:50%"><span class="folder__tab" data-i18n="nav-trajetoria">Trajetória</span></a>
+    <a class="folder is-lilac" href="#stack" style="--x-d:50%;--x-m:100%"><span class="folder__tab" data-i18n="nav-stack">Stack</span></a>
+    <a class="folder is-plum" href="#trabalho" style="--x-d:72%;--x-m:0%"><span class="folder__tab" data-i18n="nav-trabalho">Trabalho</span></a>
+  </nav>
 </section>
-<!-- Education Section -->
-<section class="py-section-padding px-margin-mobile md:px-gutter bg-surface-container-lowest" id="education">
-<div class="max-w-container-max mx-auto">
-<h2 class="font-headline-lg text-headline-lg mb-stack-lg text-center" data-i18n="edu-title">Formação Acadêmica</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-4xl mx-auto">
-<div class="fade-in bg-surface-container p-stack-lg rounded-xl border border-outline-variant/10">
-<div class="flex items-center gap-3 mb-stack-md">
-<span class="material-symbols-outlined text-primary text-3xl" data-icon="school">school</span>
-<div>
-<h3 class="font-headline-md text-headline-md" data-i18n="edu-1-title">Pós-Graduação · Arquitetura de Software</h3>
-<p class="text-secondary font-body-md">FIAP Pós-Tech</p>
-</div>
-</div>
-<p class="font-label-caps text-on-surface-variant mb-stack-sm" data-i18n="edu-1-date">JAN/2026 — DEZ/2026 · EM ANDAMENTO</p>
-<p class="font-body-md text-on-surface-variant" data-i18n="edu-1-desc">Especialização com foco em sistemas distribuídos, arquitetura escalável e soluções orientadas a domínio.</p>
-</div>
-<div class="fade-in bg-surface-container p-stack-lg rounded-xl border border-outline-variant/10">
-<div class="flex items-center gap-3 mb-stack-md">
-<span class="material-symbols-outlined text-secondary text-3xl" data-icon="school">school</span>
-<div>
-<h3 class="font-headline-md text-headline-md" data-i18n="edu-2-title">Bacharelado · Análise de Sistemas</h3>
-<p class="text-secondary font-body-md">UNIGOIÁS — Centro Universitário de Goiás</p>
-</div>
-</div>
-<p class="font-label-caps text-on-surface-variant mb-stack-sm" data-i18n="edu-2-date">AGO/2021 — JUN/2024 · CONCLUÍDO</p>
-<p class="font-body-md text-on-surface-variant" data-i18n="edu-2-desc">Bachelor of Technology (BTech) em Análise de Sistemas de Computação.</p>
-</div>
-</div>
-<div class="mt-stack-lg max-w-4xl mx-auto fade-in">
-<h3 class="font-headline-md text-headline-md text-center mb-stack-md" data-i18n="cert-title">Certificações</h3>
-<div class="flex flex-wrap justify-center gap-2">
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm">HTTP: Entendendo a web por baixo dos panos</span>
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm">Angular 14: CRUD na prática</span>
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm">HTML5 + CSS3</span>
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm">JavaScript: programando na linguagem da web</span>
-<span class="skill-chip px-3 py-1 rounded font-code-sm text-code-sm">JavaScript: explorando a linguagem</span>
-</div>
-</div>
-</div>
+
+<!-- ═══ Sobre: a pasta da frente, aberta. Continua o hero sem emenda. ═══ -->
+<section class="chapter folder is-violet sobre" id="sobre" aria-labelledby="sobre-title" style="--x-d:94%;--x-m:50%">
+  <span class="folder__tab" aria-hidden="true" data-i18n="nav-sobre">Sobre</span>
+
+  <div class="sobre__action">
+    <a class="btn btn--ground" href="#mensagem" data-i18n="hero-cta">Entrar em contato</a>
+    <p class="status">
+      <svg aria-hidden="true"><use href="#mf"/></svg>
+      <strong data-i18n="hero-status">Aberto a novas oportunidades</strong>
+      <span data-i18n="hero-place">Goiânia, GO · remoto</span>
+    </p>
+  </div>
+
+  <div class="sobre__body">
+    <div class="sobre__lead">
+      <h2 class="sobre__title" id="sobre-title" data-reveal data-i18n="sobre-title">Engenharia de software com foco em arquitetura.</h2>
+      <figure class="sobre__photo" data-shutter>
+        <img src="perfil%20lucas.jpeg" width="1086" height="1448" loading="lazy" decoding="async" alt="Retrato de Lucas Alessandro" data-i18n-alt="photo-alt">
+      </figure>
+    </div>
+
+    <div class="sobre__text" data-reveal>
+      <div class="sobre__block">
+        <h3 data-i18n="sobre-b1-t">O que eu faço</h3>
+        <p data-i18n="sobre-b1">Mais de 4 anos com PHP e Laravel em sistemas escaláveis para empresas brasileiras e norte-americanas. Minha especialidade é manter e evoluir sistemas complexos: integrações, correção de bugs e otimização de performance.</p>
+      </div>
+      <div class="sobre__block">
+        <h3 data-i18n="sobre-b2-t">Agora</h3>
+        <p data-i18n="sobre-b2">Back-End Pleno na Ileva e pós-graduando em Arquitetura de Software na FIAP, com foco em sistemas distribuídos, Clean Architecture e soluções orientadas a domínio.</p>
+      </div>
+      <dl class="stats">
+        <div><dt data-i18n="stat-1">anos de experiência</dt><dd>4+</dd></div>
+        <div><dt data-i18n="stat-2">empresas</dt><dd>3</dd></div>
+        <div><dt data-i18n="stat-3">países (BR / EUA)</dt><dd>2</dd></div>
+      </dl>
+      <a class="btn btn--ground" href="#trabalho" data-i18n="sobre-cta">Ver o trabalho</a>
+    </div>
+  </div>
 </section>
-<!-- Contact Section -->
-<section class="py-section-padding px-margin-mobile md:px-gutter bg-surface-container-low" id="contact">
-<div class="max-w-container-max mx-auto">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-<div class="fade-in">
-<h2 class="font-headline-lg text-headline-lg mb-stack-md" data-i18n="contact-title">Vamos conversar?</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg" data-i18n="contact-text">Interessado em discutir oportunidades, parcerias ou trocar ideias sobre arquitetura de software? Me chame por qualquer um dos canais abaixo.</p>
-<div class="flex items-center gap-2 mb-stack-lg bg-green-500/10 text-green-400 px-4 py-2 rounded-lg w-fit border border-green-500/20">
-<span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-<span class="text-label-caps" data-i18n="availability">ABERTO A NOVAS OPORTUNIDADES</span>
-</div>
-<div class="space-y-4">
-<a href="mailto:lucasalessandropro@gmail.com" class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
-<span class="font-body-md">lucasalessandropro@gmail.com</span>
-</a>
-<a href="https://www.linkedin.com/in/lucas-alessandro" target="_blank" rel="noopener" class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-primary" data-icon="work">work</span>
-<span class="font-body-md">linkedin.com/in/lucas-alessandro</span>
-</a>
-<a href="https://github.com/lucas-alessandro-dev" target="_blank" rel="noopener" class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-primary" data-icon="code">code</span>
-<span class="font-body-md">github.com/lucas-alessandro-dev</span>
-</a>
-<a href="https://wa.me/5562993589897" target="_blank" rel="noopener" class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-primary" data-icon="chat">chat</span>
-<span class="font-body-md">WhatsApp · +55 62 99358-9897</span>
-</a>
-<div class="flex items-center gap-4 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
-<span class="font-body-md">Goiânia, Goiás, Brasil · Remote</span>
-</div>
-</div>
-</div>
-<div class="fade-in bg-surface-container p-stack-lg rounded-2xl border border-outline-variant/10 shadow-xl">
-<form class="space-y-4" onsubmit="handleContactSubmit(event)">
-<div>
-<label class="block font-label-caps text-on-surface-variant mb-2" data-i18n="form-name" for="form-name-input">Nome</label>
-<input id="form-name-input" name="name" required class="w-full bg-surface-container-low border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface focus:border-secondary outline-none transition-colors" type="text"/>
-</div>
-<div>
-<label class="block font-label-caps text-on-surface-variant mb-2" data-i18n="form-email" for="form-email-input">Email</label>
-<input id="form-email-input" name="email" required class="w-full bg-surface-container-low border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface focus:border-secondary outline-none transition-colors" type="email"/>
-</div>
-<div>
-<label class="block font-label-caps text-on-surface-variant mb-2" data-i18n="form-msg" for="form-msg-input">Mensagem</label>
-<textarea id="form-msg-input" name="message" required class="w-full bg-surface-container-low border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface focus:border-secondary outline-none transition-colors" rows="4"></textarea>
-</div>
-<button class="w-full bg-primary-container text-on-primary-container font-bold py-4 rounded-lg hover:scale-[1.02] transition-all violet-glow" data-i18n="form-submit" type="submit">Enviar Mensagem</button>
-</form>
-</div>
-</div>
-</div>
+
+<!-- ═══ Trabalho: índice com prévia + "como eu trabalho". ═══ -->
+<section class="chapter folder is-plum trabalho" id="trabalho" aria-labelledby="trabalho-title" style="--x-d:72%;--x-m:0%">
+  <span class="folder__tab" aria-hidden="true" data-i18n="nav-trabalho">Trabalho</span>
+
+  <div class="wrap">
+    <header class="chapter__head" data-reveal>
+      <h2 id="trabalho-title" data-i18n="trabalho-title">Sistemas em que atuei</h2>
+      <p data-i18n="trabalho-sub">Uma seleção de sistemas e produtos que desenvolvi e evoluí.</p>
+    </header>
+
+    <div class="work" data-index>
+      <ol class="work__list" data-list>
+        <li class="work__row" data-row data-tone="is-violet">
+          <a class="work__link" href="https://mosyle.com/" target="_blank" rel="noopener">
+            <span class="work__num">01</span>
+            <span class="work__name" translate="no">Mosyle</span>
+            <span class="work__meta" data-i18n="w1-meta">EUA · 2024 — 2025</span>
+            <svg class="work__out" aria-hidden="true"><use href="#i-out"/></svg>
+            <span class="sr-only" data-i18n="newtab">(abre em nova aba)</span>
+          </a>
+          <div class="work__detail" data-detail>
+            <p class="work__kind" data-i18n="w1-kind">Gestão e segurança de dispositivos Apple</p>
+            <p class="work__desc" data-i18n="w1-desc">Plataforma de gerenciamento e segurança de dispositivos Apple (MDM + Endpoint Security) para escolas K-12, empresas e MSPs, com mais de 47&nbsp;mil organizações atendidas. Atuação back-end em PHP: novas funcionalidades, correções e melhorias de performance em ambiente internacional.</p>
+            <p class="work__tags" translate="no">PHP · Laravel · MySQL</p>
+          </div>
+        </li>
+        <li class="work__row" data-row data-tone="is-lilac">
+          <a class="work__link" href="https://www.ileva.com.br/" target="_blank" rel="noopener">
+            <span class="work__num">02</span>
+            <span class="work__name" translate="no">Ileva</span>
+            <span class="work__meta" data-i18n="w2-meta">Brasil · 2023–24 · 2025–hoje</span>
+            <svg class="work__out" aria-hidden="true"><use href="#i-out"/></svg>
+            <span class="sr-only" data-i18n="newtab">(abre em nova aba)</span>
+          </a>
+          <div class="work__detail" data-detail>
+            <p class="work__kind" data-i18n="w2-kind">Gestão para associações de proteção veicular</p>
+            <p class="work__desc" data-i18n="w2-desc">Plataforma de gestão para associações de proteção veicular: módulos comercial (captação de leads, propostas, vistoria e assinatura digital), gestão de eventos (sinistros, oficinas) e gestão do associado. Atuação na evolução, nas integrações e em novas funcionalidades.</p>
+            <p class="work__tags" translate="no">PHP · Laravel · SonarQube</p>
+          </div>
+        </li>
+        <li class="work__row" data-row data-tone="is-paper">
+          <a class="work__link" href="https://netsupre.com.br/" target="_blank" rel="noopener">
+            <span class="work__num">03</span>
+            <span class="work__name" translate="no">Net Supre</span>
+            <span class="work__meta" data-i18n="w3-meta">Brasil · 2022 — 2023</span>
+            <svg class="work__out" aria-hidden="true"><use href="#i-out"/></svg>
+            <span class="sr-only" data-i18n="newtab">(abre em nova aba)</span>
+          </a>
+          <div class="work__detail" data-detail>
+            <p class="work__kind" data-i18n="w3-kind">SIG: gestão e cobrança integradas</p>
+            <p class="work__desc" data-i18n="w3-desc">Sistema Integrado de Gestão da Net Supre: suíte com módulos de cobrança para cooperativas Sicoob, gestão imobiliária, sindicatos e associações e comunicação. Atuação em desenvolvimento, manutenção e integrações entre os módulos.</p>
+            <p class="work__tags" translate="no">PHP · Laravel · MySQL</p>
+          </div>
+        </li>
+        <li class="work__row" data-row data-tone="is-light">
+          <a class="work__link" href="https://github.com/lucas-alessandro-dev" target="_blank" rel="noopener">
+            <span class="work__num">04</span>
+            <span class="work__name" data-i18n="w4-name">Open source</span>
+            <span class="work__meta" data-i18n="w4-meta">GitHub · contínuo</span>
+            <svg class="work__out" aria-hidden="true"><use href="#i-out"/></svg>
+            <span class="sr-only" data-i18n="newtab">(abre em nova aba)</span>
+          </a>
+          <div class="work__detail" data-detail>
+            <p class="work__kind" data-i18n="w4-kind">Clean Architecture, DDD e automação</p>
+            <p class="work__desc" data-i18n="w4-desc">Projetos pessoais e de estudo no GitHub explorando Clean Architecture, DDD, automação e novas tecnologias do ecossistema PHP/Node.</p>
+            <p class="work__tags" translate="no">PHP · Node.js · Clean Arch</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="work__frame" data-frame aria-hidden="true"></div>
+    </div>
+
+    <div class="method" id="como">
+      <div class="method__head" data-reveal>
+        <h2 data-i18n="method-title">Como eu trabalho</h2>
+        <p data-i18n="method-text">Boa parte do meu trabalho é pegar sistemas que já existem (regras espalhadas, integrações antigas, muito uso real) e organizá-los aos poucos, com tudo em produção.</p>
+      </div>
+      <div class="method__body">
+        <svg class="method__diagram method__diagram--h" viewBox="0 0 900 200" aria-hidden="true" data-diagram="h"></svg>
+        <svg class="method__diagram method__diagram--v" viewBox="0 0 300 760" aria-hidden="true" data-diagram="v"></svg>
+        <ol class="method__steps">
+          <li><h3 data-i18n="m1-t">Entender</h3><p data-i18n="m1">Ler o código e as regras de negócio como estão hoje: o legado, as integrações e os bugs que mais doem.</p></li>
+          <li><h3 data-i18n="m2-t">Organizar</h3><p data-i18n="m2">Separar domínio de infraestrutura com Clean Architecture e DDD, em passos pequenos.</p></li>
+          <li><h3 data-i18n="m3-t">Evoluir</h3><p data-i18n="m3">Entregar funcionalidades, integrações e ganhos de performance sobre uma base que aguenta crescer.</p></li>
+        </ol>
+      </div>
+    </div>
+  </div>
 </section>
+
+<!-- ═══ Stack: espécimes sobre placas de cor. ═══ -->
+<section class="chapter folder is-lilac stackc" id="stack" aria-labelledby="stack-title" style="--x-d:50%;--x-m:100%">
+  <span class="folder__tab" aria-hidden="true" data-i18n="nav-stack">Stack</span>
+
+  <div class="wrap stackc__grid">
+    <header class="stackc__head" data-reveal>
+      <h2 id="stack-title" data-i18n="stack-title">O que eu uso</h2>
+      <p data-i18n="stack-sub">As ferramentas do dia a dia para colocar sistemas no ar e mantê-los de pé.</p>
+    </header>
+
+    <ul class="tiles" data-reveal>
+      <li class="tile">
+        <div translate="no" class="tile__face is-violet" aria-hidden="true"><span style="--s:27cqi">&lt;?php</span></div>
+        <h3 class="tile__name" translate="no">PHP&nbsp;8</h3>
+        <p class="tile__fact" data-i18n="t1-fact">A base de todas as empresas em que trabalhei desde 2022.</p>
+      </li>
+      <li class="tile tile--wide">
+        <div translate="no" class="tile__face is-plum" aria-hidden="true"><span style="--s:17cqi">artisan</span></div>
+        <h3 class="tile__name" translate="no">Laravel</h3>
+        <p class="tile__fact" data-i18n="t2-fact">Framework principal nos sistemas SaaS que mantive.</p>
+      </li>
+      <li class="tile">
+        <div translate="no" class="tile__face is-paper" aria-hidden="true"><span style="--s:28cqi">await</span></div>
+        <h3 class="tile__name" translate="no">Node.js</h3>
+        <p class="tile__fact" data-i18n="t3-fact">Back-end em JavaScript, ao lado do PHP.</p>
+      </li>
+      <li class="tile">
+        <div translate="no" class="tile__face is-violet" aria-hidden="true"><span style="--s:32cqi">JOIN</span></div>
+        <h3 class="tile__name" translate="no">MySQL</h3>
+        <p class="tile__fact" data-i18n="t4-fact">Modelagem, consultas e performance.</p>
+      </li>
+      <li class="tile">
+        <div translate="no" class="tile__face is-paper" aria-hidden="true"><span style="--s:46cqi">ng</span></div>
+        <h3 class="tile__name" translate="no">Angular + TypeScript</h3>
+        <p class="tile__fact" data-i18n="t5-fact">Angular 14 quando o trabalho pede front-end.</p>
+      </li>
+    </ul>
+
+    <div class="toolbox" data-reveal>
+      <h3 data-i18n="toolbox-title">Também no dia a dia</h3>
+      <ul>
+        <li data-i18n="tb-rest">APIs REST</li>
+        <li>JavaScript</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>SonarQube</li>
+        <li>Git</li>
+        <li>Linux</li>
+        <li>macOS</li>
+        <li>Clean Architecture</li>
+        <li>DDD</li>
+        <li data-i18n="tb-dist">Sistemas distribuídos</li>
+        <li data-i18n="tb-int">Integrações</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Trajetória: lista em duas colunas, a pasta como marcador. ═══ -->
+<section class="chapter folder is-dusk trajetoria" id="trajetoria" aria-label="Trajetória" data-i18n-aria="nav-trajetoria" style="--x-d:28%;--x-m:50%">
+  <span class="folder__tab" aria-hidden="true" data-i18n="nav-trajetoria">Trajetória</span>
+
+  <div class="wrap">
+    <div class="cat" data-reveal>
+      <div class="cat__head">
+        <h2 data-i18n="exp-title">Experiência</h2>
+        <span class="cat__count" data-i18n="exp-count">5 cargos</span>
+      </div>
+      <ol class="items">
+        <li class="item">
+          <span class="glyph glyph--now" aria-hidden="true">I</span>
+          <div>
+            <div class="item__line"><h3 data-i18n="exp-1-role">Desenvolvedor Back-End Pleno</h3><span class="item__date" data-i18n="exp-1-date">out/2025 — hoje</span></div>
+            <p class="item__org">Ileva Gestão Inteligente · Goiânia, BR</p>
+            <p class="item__desc" data-i18n="exp-1-desc">Evolução de sistemas back-end com foco em organização arquitetural, manutenção de legado e novas funcionalidades. Atuação em correções, otimizações e integrações, participando de decisões técnicas voltadas a escalabilidade, qualidade e manutenibilidade.</p>
+          </div>
+        </li>
+        <li class="item">
+          <span class="glyph" aria-hidden="true">M</span>
+          <div>
+            <div class="item__line"><h3>Back-End PHP</h3><span class="item__date" data-i18n="exp-2-date">fev/2024 — nov/2025</span></div>
+            <p class="item__org" data-i18n="exp-2-org">Mosyle · Winter Park, Flórida, EUA</p>
+            <p class="item__desc" data-i18n="exp-2-desc">Desenvolvimento e manutenção de aplicações back-end em PHP para sistemas corporativos em ambiente internacional. Novas funcionalidades, correção de bugs e melhorias de performance, com inglês técnico no dia a dia.</p>
+          </div>
+        </li>
+        <li class="item">
+          <span class="glyph" aria-hidden="true">I</span>
+          <div>
+            <div class="item__line"><h3>Back-End PHP</h3><span class="item__date" data-i18n="exp-3-date">ago/2023 — mar/2024</span></div>
+            <p class="item__org">Ileva Gestão Inteligente · Goiânia, BR</p>
+            <p class="item__desc" data-i18n="exp-3-desc">Novas funcionalidades e manutenção de sistemas existentes, com integrações, testes e melhoria contínua da qualidade do software, em colaboração com diferentes áreas da empresa.</p>
+          </div>
+        </li>
+        <li class="item">
+          <span class="glyph" aria-hidden="true">N</span>
+          <div>
+            <div class="item__line"><h3>Back-End PHP</h3><span class="item__date" data-i18n="exp-4-date">ago/2022 — jul/2023</span></div>
+            <p class="item__org">Net Supre Tecnologia · Goiânia, BR</p>
+            <p class="item__desc" data-i18n="exp-4-desc">Sistemas de faturamento e gestão para cooperativas financeiras (Sicoob), além de CRMs para imobiliárias, sindicatos e associações. Criação e manutenção de sites corporativos.</p>
+          </div>
+        </li>
+        <li class="item">
+          <span class="glyph" aria-hidden="true">N</span>
+          <div>
+            <div class="item__line"><h3 data-i18n="exp-5-role">Suporte Técnico</h3><span class="item__date" data-i18n="exp-5-date">fev/2022 — ago/2022</span></div>
+            <p class="item__org">Net Supre Tecnologia · Goiânia, BR</p>
+            <p class="item__desc" data-i18n="exp-5-desc">Atendimento e suporte a usuários e apoio na operação de sistemas internos: o primeiro contato com o ambiente técnico, antes da transição para o desenvolvimento.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="cat" data-reveal>
+      <div class="cat__head">
+        <h2 data-i18n="edu-title">Formação</h2>
+        <span class="cat__count" data-i18n="edu-count">2 cursos</span>
+      </div>
+      <ol class="items">
+        <li class="item">
+          <span class="glyph glyph--now" aria-hidden="true">F</span>
+          <div>
+            <div class="item__line"><h3 data-i18n="edu-1-title">Pós-graduação · Arquitetura de Software</h3><span class="item__date" data-i18n="edu-1-date">2026 · em andamento</span></div>
+            <p class="item__org">FIAP Pós-Tech</p>
+            <p class="item__desc" data-i18n="edu-1-desc">Especialização com foco em sistemas distribuídos, arquitetura escalável e soluções orientadas a domínio.</p>
+          </div>
+        </li>
+        <li class="item">
+          <span class="glyph" aria-hidden="true">U</span>
+          <div>
+            <div class="item__line"><h3 data-i18n="edu-2-title">Bacharelado · Análise de Sistemas</h3><span class="item__date" data-i18n="edu-2-date">2021 — 2024</span></div>
+            <p class="item__org">UNIGOIÁS — Centro Universitário de Goiás</p>
+            <p class="item__desc" data-i18n="edu-2-desc">Bachelor of Technology (BTech) em Análise de Sistemas de Computação. Concluído em junho de 2024.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="cat" data-reveal>
+      <div class="cat__head">
+        <h2 data-i18n="cert-title">Certificações</h2>
+        <span class="cat__count" data-i18n="cert-count">5 cursos</span>
+      </div>
+      <ul class="items items--compact">
+        <li class="item"><span class="glyph glyph--small" aria-hidden="true"></span><h3>HTTP: Entendendo a web por baixo dos panos</h3></li>
+        <li class="item"><span class="glyph glyph--small" aria-hidden="true"></span><h3>Angular 14: CRUD na prática</h3></li>
+        <li class="item"><span class="glyph glyph--small" aria-hidden="true"></span><h3>HTML5 + CSS3</h3></li>
+        <li class="item"><span class="glyph glyph--small" aria-hidden="true"></span><h3>JavaScript: programando na linguagem da web</h3></li>
+        <li class="item"><span class="glyph glyph--small" aria-hidden="true"></span><h3>JavaScript: explorando a linguagem</h3></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Contato: perguntas rápidas + a pasta da mensagem. ═══ -->
+<section class="chapter folder is-paper contato" id="contato" aria-labelledby="contato-title" style="--x-d:6%;--x-m:0%">
+  <span class="folder__tab" aria-hidden="true" data-i18n="nav-contato">Contato</span>
+
+  <div class="wrap faq">
+    <h2 class="faq__title" data-reveal data-i18n="faq-title">Perguntas rápidas</h2>
+    <div class="faq__list" data-reveal>
+      <details class="faq__item" name="faq">
+        <summary><span data-i18n="q1">Você trabalha remoto?</span><span class="plus" aria-hidden="true"></span></summary>
+        <p data-i18n="a1">Sim. Moro em Goiânia (GO) e estou aberto a posições remotas, no Brasil ou fora dele.</p>
+      </details>
+      <details class="faq__item" name="faq">
+        <summary><span data-i18n="q2">Como é o seu inglês?</span><span class="plus" aria-hidden="true"></span></summary>
+        <p data-i18n="a2">Uso inglês técnico no dia a dia. Na Mosyle, empresa de Winter Park (Flórida, EUA), trabalhei quase dois anos em ambiente internacional.</p>
+      </details>
+      <details class="faq__item" name="faq">
+        <summary><span data-i18n="q3">Qual é a sua stack principal?</span><span class="plus" aria-hidden="true"></span></summary>
+        <p data-i18n="a3">PHP 8 e Laravel no back-end, com Node.js, MySQL e APIs REST. Quando o trabalho pede, também atuo no front-end com Angular e TypeScript.</p>
+      </details>
+      <details class="faq__item" name="faq">
+        <summary><span data-i18n="q4">Que tipo de sistema você já manteve?</span><span class="plus" aria-hidden="true"></span></summary>
+        <p data-i18n="a4">SaaS em produção: gestão de dispositivos Apple para mais de 47&nbsp;mil organizações, gestão de associações de proteção veicular, cobrança para cooperativas Sicoob e CRMs para imobiliárias, sindicatos e associações.</p>
+      </details>
+      <details class="faq__item" name="faq">
+        <summary><span data-i18n="q5">Em que fuso horário você está?</span><span class="plus" aria-hidden="true"></span></summary>
+        <p data-i18n="a5">Horário de Brasília (UTC−3), com boa sobreposição com o horário da costa leste dos EUA.</p>
+      </details>
+      <details class="faq__item" name="faq">
+        <summary><span data-i18n="q6">Está disponível para novas oportunidades?</span><span class="plus" aria-hidden="true"></span></summary>
+        <p data-i18n="a6">Sim. Hoje sou Back-End Pleno na Ileva e estou aberto a conversar. O caminho mais rápido é o e-mail ou o WhatsApp.</p>
+      </details>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="card folder is-violet" id="mensagem" style="--x-d:0%;--x-m:0%" data-reveal>
+      <span class="folder__tab" aria-hidden="true" data-i18n="card-tab">Nova mensagem</span>
+
+      <div class="card__intro">
+        <h2 id="contato-title" data-i18n="contact-title">Vamos conversar?</h2>
+        <p data-i18n="contact-text">Interessado em discutir oportunidades, parcerias ou trocar ideias sobre arquitetura de software? Me chame por qualquer um dos canais abaixo.</p>
+        <ul class="channels">
+          <li><span data-i18n="ch-email">E-mail</span><a href="mailto:lucasalessandropro@gmail.com">lucasalessandropro@gmail.com</a></li>
+          <li><span>WhatsApp</span><a href="https://wa.me/5562993589897" target="_blank" rel="noopener">+55 62 99358-9897</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/lucas-alessandro" target="_blank" rel="noopener">in/lucas-alessandro</a></li>
+          <li><span>GitHub</span><a href="https://github.com/lucas-alessandro-dev" target="_blank" rel="noopener">lucas-alessandro-dev</a></li>
+        </ul>
+      </div>
+
+      <form class="card__form" action="mailto:lucasalessandropro@gmail.com" method="post" enctype="text/plain" data-contact>
+        <div class="field">
+          <label for="f-nome" data-i18n="form-name">Nome</label>
+          <input id="f-nome" name="nome" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-email" data-i18n="form-email">E-mail</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" spellcheck="false" required>
+        </div>
+        <div class="field">
+          <label for="f-mensagem" data-i18n="form-msg">Mensagem</label>
+          <textarea id="f-mensagem" name="mensagem" rows="4" autocomplete="off" required></textarea>
+        </div>
+        <button class="btn btn--ink btn--block" type="submit" name="via" value="email" data-i18n="send-email">Enviar por e-mail</button>
+        <button class="linkbtn" type="submit" name="via" value="whatsapp" formaction="https://wa.me/5562993589897" formmethod="get" data-i18n="send-wa">ou enviar pelo WhatsApp</button>
+        <p class="card__note" data-i18n="form-note">O envio abre o seu app de e-mail ou o WhatsApp com a mensagem pronta.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
 </main>
-<!-- Footer -->
-<footer class="w-full py-stack-lg border-t border-outline-variant/10 bg-surface">
-<div class="flex flex-col md:flex-row justify-between items-center gap-stack-md px-margin-mobile md:px-gutter max-w-container-max mx-auto">
-<div class="flex flex-col items-center md:items-start gap-2">
-<div class="font-headline-md text-headline-md text-on-surface font-bold">Lucas Alessandro</div>
-<p class="font-body-md text-on-surface-variant text-sm" data-i18n="footer-copy">© 2026 Lucas Alessandro · Construído com Laravel-mindset.</p>
-</div>
-<div class="flex gap-stack-lg">
-<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-caps" href="https://github.com/lucas-alessandro-dev" target="_blank" rel="noopener">GITHUB</a>
-<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-caps" href="https://www.linkedin.com/in/lucas-alessandro" target="_blank" rel="noopener">LINKEDIN</a>
-<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-caps" href="mailto:lucasalessandropro@gmail.com">EMAIL</a>
-</div>
-<button class="material-symbols-outlined text-primary hover:translate-y-[-4px] transition-transform" data-icon="arrow_upward" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Back to top">arrow_upward</button>
-</div>
+
+<!-- ═══ Rodapé: as cinco pastas voltam como as letras do nome. ═══ -->
+<footer class="footer">
+  <div class="mark" aria-hidden="true" translate="no">
+    <span class="mark__block" style="--h:100%;--c:var(--violet);--x:10%"><b>L</b></span>
+    <span class="mark__block" style="--h:74%;--c:var(--lilac);--x:46%"><b>U</b></span>
+    <span class="mark__block" style="--h:88%;--c:var(--paper);--x:18%"><b>C</b></span>
+    <span class="mark__block" style="--h:64%;--c:var(--violet-light);--x:52%"><b>A</b></span>
+    <span class="mark__block" style="--h:94%;--c:var(--violet);--x:30%"><b>S</b></span>
+  </div>
+
+  <div class="footer__cols">
+    <nav aria-label="Seções" data-i18n-aria="nav-label">
+      <h2 data-i18n="f-sections">Seções</h2>
+      <ul>
+        <li><a href="#sobre" data-i18n="nav-sobre">Sobre</a></li>
+        <li><a href="#trabalho" data-i18n="nav-trabalho">Trabalho</a></li>
+        <li><a href="#stack" data-i18n="nav-stack">Stack</a></li>
+        <li><a href="#trajetoria" data-i18n="nav-trajetoria">Trajetória</a></li>
+        <li><a href="#contato" data-i18n="nav-contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2 data-i18n="f-profiles">Perfis</h2>
+      <ul>
+        <li><a href="https://github.com/lucas-alessandro-dev" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/lucas-alessandro" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 data-i18n="f-contact">Contato</h2>
+      <ul>
+        <li><a href="mailto:lucasalessandropro@gmail.com">lucasalessandropro@gmail.com</a></li>
+        <li><a href="https://wa.me/5562993589897" target="_blank" rel="noopener">WhatsApp · +55 62 99358-9897</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 data-i18n="f-where">Onde</h2>
+      <ul>
+        <li data-i18n="f-where-1">Goiânia, Goiás, Brasil</li>
+        <li data-i18n="f-where-2">Aberto a trabalho remoto</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__end">
+    <p data-i18n="footer-copy">© 2026 Lucas Alessandro · Construído com Laravel-mindset.</p>
+    <a class="btn btn--small" href="#topo"><span data-i18n="f-top">Topo</span><svg aria-hidden="true"><use href="#i-up"/></svg></a>
+  </div>
 </footer>
-<script>
-        const translations = {
-            pt: {
-                "nav-about": "Sobre", "nav-skills": "Skills", "nav-projects": "Projetos", "nav-experience": "Experiência", "nav-education": "Formação", "nav-contact": "Contato",
-                "hero-tag": "SOFTWARE ENGINEER · PHP · LARAVEL",
-                "hero-title": "Olá, eu sou Lucas Alessandro.",
-                "hero-desc": "Engenheiro de Software focado em Back-End com PHP, Laravel e Node.js. Atuo no desenvolvimento e evolução de sistemas escaláveis, em projetos nacionais e internacionais, com foco em Arquitetura de Software e Clean Architecture.",
-                "hero-btn-projects": "Ver Projetos",
-                "hero-btn-contact": "Entrar em contato",
-                "terminal-status": "Aberto a novas oportunidades_",
-                "about-title": "Engenharia de Software com foco em Arquitetura",
-                "about-text": "Desenvolvedor Back-End com mais de 4 anos de experiência em PHP e Laravel, atuando em sistemas escaláveis para empresas brasileiras e norte-americanas. Especialidade em manutenção e evolução de sistemas complexos, integração entre sistemas, correção de bugs e otimização de performance. Atualmente em especialização em Arquitetura de Software (FIAP Pós-Tech), com foco em sistemas distribuídos, Clean Architecture e soluções orientadas a domínio.",
-                "stat-1": "Anos de Exp.", "stat-2": "Empresas", "stat-3": "Países (BR / US)",
-                "skills-title": "Arsenal Técnico",
-                "skill-cat-1": "Backend", "skill-cat-2": "Frontend", "skill-cat-3": "Qualidade / Ferramentas", "skill-cat-4": "Arquitetura",
-                "skill-s1": "Clean Architecture", "skill-s2": "DDD", "skill-s3": "Sistemas Distribuídos", "skill-s4": "Integrações",
-                "projects-title": "Domínios em que atuei",
-                "projects-subtitle": "Uma seleção de sistemas e produtos em que desenvolvi e evoluí.",
-                "filter-all": "TUDO", "filter-saas": "SAAS",
-                "proj-1-desc": "Plataforma de gerenciamento e segurança de dispositivos Apple (MDM + Endpoint Security) para escolas K-12, empresas e MSPs — mais de 47 mil organizações atendidas. Atuação backend em PHP: novas funcionalidades, correções e melhorias de performance em ambiente internacional.",
-                "proj-2-desc": "Plataforma de gestão para associações de proteção veicular — módulos comercial (captação de leads, propostas, vistoria e assinatura digital), gestão de eventos (sinistros, oficinas) e gestão do associado. Atuação na evolução, integrações e novas funcionalidades.",
-                "proj-3-desc": "Sistema Integrado de Gestão da Net Supre — suíte composta por módulos de cobrança para cooperativas Sicoob, gestão imobiliária, sindicatos/associações e comunicação. Atuação em desenvolvimento, manutenção e integrações entre os módulos.",
-                "proj-5-desc": "Projetos pessoais e de estudo no GitHub explorando Clean Architecture, DDD, automação e novas tecnologias do ecossistema PHP/Node.",
-                "exp-title": "Trajetória Profissional",
-                "exp-1-date": "OUT/2025 — PRESENTE", "exp-1-role": "Desenvolvedor Back-End Pleno",
-                "exp-1-desc": "Evolução de sistemas backend com foco em organização arquitetural, manutenção de legado e implementação de novas funcionalidades. Atuação em correções, otimizações e integrações, participando de decisões técnicas voltadas a escalabilidade, qualidade e manutenibilidade.",
-                "exp-2-date": "FEV/2024 — NOV/2025", "exp-2-role": "Back-End PHP",
-                "exp-2-desc": "Desenvolvimento e manutenção de aplicações backend em PHP para sistemas corporativos em ambiente internacional. Implementação de novas funcionalidades, correção de bugs e melhorias de performance, com uso de inglês técnico no dia a dia.",
-                "exp-3-date": "AGO/2023 — MAR/2024", "exp-3-role": "Back-End PHP",
-                "exp-3-desc": "Desenvolvimento de novas funcionalidades e manutenção de sistemas existentes, atuando em integrações, testes e melhoria contínua da qualidade do software, com colaboração entre diferentes áreas da empresa.",
-                "exp-4-date": "AGO/2022 — JUL/2023", "exp-4-role": "Back-End PHP",
-                "exp-4-desc": "Desenvolvimento e manutenção de sistemas de faturamento e gestão para cooperativas financeiras (Sicoob), além de CRMs para imobiliárias, sindicatos e associações. Criação e manutenção de websites corporativos.",
-                "exp-5-date": "FEV/2022 — AGO/2022", "exp-5-role": "Suporte Técnico",
-                "exp-5-desc": "Atendimento e suporte a usuários, apoio na manutenção e operação de sistemas internos — primeiro contato com o ambiente técnico antes da transição para desenvolvimento.",
-                "edu-title": "Formação Acadêmica",
-                "edu-1-title": "Pós-Graduação · Arquitetura de Software",
-                "edu-1-date": "JAN/2026 — DEZ/2026 · EM ANDAMENTO",
-                "edu-1-desc": "Especialização com foco em sistemas distribuídos, arquitetura escalável e soluções orientadas a domínio.",
-                "edu-2-title": "Bacharelado · Análise de Sistemas",
-                "edu-2-date": "AGO/2021 — JUN/2024 · CONCLUÍDO",
-                "edu-2-desc": "Bachelor of Technology (BTech) em Análise de Sistemas de Computação.",
-                "cert-title": "Certificações",
-                "contact-title": "Vamos conversar?",
-                "contact-text": "Interessado em discutir oportunidades, parcerias ou trocar ideias sobre arquitetura de software? Me chame por qualquer um dos canais abaixo.",
-                "availability": "ABERTO A NOVAS OPORTUNIDADES",
-                "form-name": "Nome", "form-email": "Email", "form-msg": "Mensagem", "form-submit": "Enviar Mensagem",
-                "footer-copy": "© 2026 Lucas Alessandro · Construído com Laravel-mindset."
-            },
-            en: {
-                "nav-about": "About", "nav-skills": "Skills", "nav-projects": "Projects", "nav-experience": "Experience", "nav-education": "Education", "nav-contact": "Contact",
-                "hero-tag": "SOFTWARE ENGINEER · PHP · LARAVEL",
-                "hero-title": "Hi, I'm Lucas Alessandro.",
-                "hero-desc": "Back-End focused Software Engineer working with PHP, Laravel and Node.js. I develop and evolve scalable systems in both Brazilian and international projects, with a focus on Software Architecture and Clean Architecture.",
-                "hero-btn-projects": "View Projects",
-                "hero-btn-contact": "Get in touch",
-                "terminal-status": "Open to new opportunities_",
-                "about-title": "Software Engineering with an Architecture Mindset",
-                "about-text": "Back-End developer with 4+ years of experience in PHP and Laravel, building scalable systems for Brazilian and US-based companies. Specialty in maintaining and evolving complex systems, systems integration, bug fixing and performance optimization. Currently pursuing a postgraduate degree in Software Architecture (FIAP Pós-Tech), focused on distributed systems, Clean Architecture and Domain-Driven solutions.",
-                "stat-1": "Years Exp.", "stat-2": "Companies", "stat-3": "Countries (BR / US)",
-                "skills-title": "Technical Arsenal",
-                "skill-cat-1": "Backend", "skill-cat-2": "Frontend", "skill-cat-3": "Quality / Tools", "skill-cat-4": "Architecture",
-                "skill-s1": "Clean Architecture", "skill-s2": "DDD", "skill-s3": "Distributed Systems", "skill-s4": "Integrations",
-                "projects-title": "Domains I've Worked On",
-                "projects-subtitle": "A selection of systems and products I've built and evolved.",
-                "filter-all": "ALL", "filter-saas": "SAAS",
-                "proj-1-desc": "Apple device management and security platform (MDM + Endpoint Security) for K-12 schools, businesses and MSPs — serving 47,000+ organizations. Back-End PHP work: new features, bug fixes and performance improvements in an international environment.",
-                "proj-2-desc": "Management platform for vehicle protection associations — commercial module (lead capture, proposals, inspections and digital signing), event management (claims, workshops) and member management. Worked on evolution, integrations and new features.",
-                "proj-3-desc": "Net Supre's Integrated Management System (SIG) — a suite covering billing modules for Sicoob cooperatives, real estate management, unions/associations and communication. Worked on development, maintenance and integration across the modules.",
-                "proj-5-desc": "Personal and study projects on GitHub exploring Clean Architecture, DDD, automation and new tech from the PHP/Node ecosystem.",
-                "exp-title": "Career Path",
-                "exp-1-date": "OCT/2025 — PRESENT", "exp-1-role": "Mid-Level Back-End Developer",
-                "exp-1-desc": "Evolution of back-end systems with focus on architectural organization, legacy maintenance and new features. Bug fixing, optimizations and integrations, participating in technical decisions around scalability, quality and maintainability.",
-                "exp-2-date": "FEB/2024 — NOV/2025", "exp-2-role": "Back-End PHP",
-                "exp-2-desc": "Development and maintenance of back-end PHP applications for corporate systems in an international setting. New features, bug fixes and performance improvements with daily use of technical English.",
-                "exp-3-date": "AUG/2023 — MAR/2024", "exp-3-role": "Back-End PHP",
-                "exp-3-desc": "Development of new features and maintenance of existing systems, working on integrations, testing and continuous quality improvement with cross-team collaboration.",
-                "exp-4-date": "AUG/2022 — JUL/2023", "exp-4-role": "Back-End PHP",
-                "exp-4-desc": "Development and maintenance of billing and management systems for Sicoob financial cooperatives, plus CRMs for real estate agencies, unions and associations. Built and maintained corporate websites.",
-                "exp-5-date": "FEB/2022 — AUG/2022", "exp-5-role": "Technical Support",
-                "exp-5-desc": "User support and assistance maintaining and operating internal systems — first contact with the technical environment before transitioning into development.",
-                "edu-title": "Education",
-                "edu-1-title": "Postgraduate · Software Architecture",
-                "edu-1-date": "JAN/2026 — DEC/2026 · IN PROGRESS",
-                "edu-1-desc": "Specialization focused on distributed systems, scalable architecture and domain-driven solutions.",
-                "edu-2-title": "Bachelor · Systems Analysis",
-                "edu-2-date": "AUG/2021 — JUN/2024 · COMPLETED",
-                "edu-2-desc": "Bachelor of Technology (BTech) in Computer Systems Analysis.",
-                "cert-title": "Certifications",
-                "contact-title": "Let's talk?",
-                "contact-text": "Interested in discussing opportunities, partnerships or just exchanging ideas on software architecture? Reach out on any of the channels below.",
-                "availability": "OPEN TO NEW OPPORTUNITIES",
-                "form-name": "Name", "form-email": "Email", "form-msg": "Message", "form-submit": "Send Message",
-                "footer-copy": "© 2026 Lucas Alessandro · Built with a Laravel mindset."
-            }
-        };
 
-        const STORAGE_KEY = 'portfolio-lang';
-
-        function setLanguage(lang) {
-            if (!translations[lang]) return;
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                if (translations[lang][key]) {
-                    element.textContent = translations[lang][key];
-                }
-            });
-
-            document.getElementById('lang-pt').classList.toggle('active-lang', lang === 'pt');
-            document.getElementById('lang-pt').classList.toggle('text-on-surface-variant', lang !== 'pt');
-            document.getElementById('lang-en').classList.toggle('active-lang', lang === 'en');
-            document.getElementById('lang-en').classList.toggle('text-on-surface-variant', lang !== 'en');
-
-            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
-            try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
-        }
-
-        function toggleMobileMenu() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        }
-
-        function handleContactSubmit(event) {
-            event.preventDefault();
-            const form = event.target;
-            const subject = `[Portfolio] Contato de ${form.name.value}`;
-            const body = `${form.message.value}\n\n---\nDe: ${form.name.value} <${form.email.value}>`;
-            const whatsappMsg = `*Contato pelo Portfolio*\nNome: ${form.name.value}\nEmail: ${form.email.value}\n\n${form.message.value}`;
-
-            const mailLink = document.createElement('a');
-            mailLink.href = `mailto:lucasalessandropro@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            document.body.appendChild(mailLink);
-            mailLink.click();
-            document.body.removeChild(mailLink);
-
-            window.location.href = `https://wa.me/5562993589897?text=${encodeURIComponent(whatsappMsg)}`;
-        }
-
-        function setupProjectFilter() {
-            const buttons = document.querySelectorAll('#project-filters button');
-            const cards = document.querySelectorAll('#project-grid > [data-category]');
-            buttons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const filter = btn.dataset.filter;
-                    buttons.forEach(b => {
-                        b.classList.remove('border-primary', 'text-primary');
-                        b.classList.add('border-outline-variant', 'text-on-surface-variant');
-                    });
-                    btn.classList.add('border-primary', 'text-primary');
-                    btn.classList.remove('border-outline-variant', 'text-on-surface-variant');
-                    cards.forEach(card => {
-                        const show = filter === 'all' || card.dataset.category === filter;
-                        card.style.display = show ? '' : 'none';
-                    });
-                });
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            let initial = 'pt';
-            try { initial = localStorage.getItem(STORAGE_KEY) || (navigator.language.startsWith('pt') ? 'pt' : 'en'); } catch (e) {}
-            setLanguage(initial);
-            setupProjectFilter();
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) entry.target.classList.add('visible');
-                });
-            }, { threshold: 0.1 });
-            document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
-        });
-    </script>
+<script src="js/site.js" defer></script>
 </body>
 </html>
